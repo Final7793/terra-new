@@ -22,6 +22,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "my-instance" {
     ami = data.aws_ami.ubuntu.id
+    key_name = demo
 
 
 
