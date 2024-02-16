@@ -22,7 +22,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "my-instance" {
     ami = data.aws_ami.ubuntu.id
-    #key_name = "demo"
+    security_groups = ["aws_security_group.allow_tls.name"]
 
 
 
