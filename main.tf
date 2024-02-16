@@ -28,8 +28,7 @@ resource "aws_instance" "my-instance" {
 
     instance_type = var.instance_type
 }
-vpc_security_group_ids = [
-    aws_security_group.example.id ]
+
 
 
 resource "aws_security_group" "allow_tls" {
