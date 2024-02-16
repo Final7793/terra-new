@@ -32,7 +32,7 @@ resource "aws_instance" "my-instance" {
 resource "aws_security_group" "my-sg" {
   name        = "my-sg"
   description = "Allow TLS inbound traffic and all outbound traffic"
-  vpc_id      = vpc-0234e221805288aa7
+  vpc_id      = "vpc-0234e221805288aa7"
 
   tags = {
     Name = "allow_tls"
