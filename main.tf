@@ -23,6 +23,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_key_pair" "tf_key" {
   key_name   = "tf_key"
   public_key = tls_private_key.rsa.public_key_openssh
+}
 
   resource "tls_private_key" "rsa" {
   algorithm = "RSA"
